@@ -1,4 +1,4 @@
-SSTI payloads for exploit 
+ SSTI payloads for exploit 
 This payloads real using in  bug bounty sites
 SSTI (Server-Side Template Injection) occurs when user-controlled input is passed directly into a server-side template engine.  
 This allows an attacker to break out of the template context and execute OS-level commands.
